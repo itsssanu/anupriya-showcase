@@ -1,0 +1,195 @@
+@import "../../app.scss";
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 10px;
+    }
+    .mbltitle{
+      display: none;
+      @include mobile {
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+        color: #ffff;
+        padding: 4px;
+      }
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
+    }
+  }
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        display: none;
+      }
+
+      h1 {
+        font-size: 80px;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 30px;
+        }
+      }
+      button.frt-btn{
+        background: linear-gradient(145deg, #1e1e30, #141427);
+        color:#ffff;
+        border: 2px solid #fa6400;
+
+        &:hover{
+          background: linear-gradient(135deg, #ff944d, #6c00d8);
+        }
+      }
+
+      button {
+        width: 289px;
+        height: 84px;
+        border-radius: 50px;
+        background: linear-gradient(135deg, #ff944d, #6c00d8);
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        font-weight: 500;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
+    gap: 20px;
+    flex-wrap: wrap;
+  
+    @include mobile {
+      flex-direction: column;
+      width: 90%;
+      gap: 10px;
+    }
+  
+    .box {
+      flex: 1 1 calc(25% - 20px); 
+      background: linear-gradient(145deg, #1e1e30, #141427);
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 0.5px solid gray;
+  
+      @include mobile {
+        flex: none;
+        width: 100%;
+        padding: 26px;
+        margin-bottom: 12px;
+      }
+  
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 1.3rem;
+        margin: 20px 0;
+        text-align: justify;
+        line-height: 1.4;
+  
+        @include mobile {
+          font-size: 0.9rem;
+          margin: 10px 0;
+        }
+      }
+      .tech{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+  
+      button {
+        padding: 12px 20px;
+        background: linear-gradient(135deg, #ff944d, #6c00d8);
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+  
+        &:hover {
+          background: linear-gradient(135deg, #6c00d8, #ff944d);
+          transform: translateY(-3px);
+        }
+      
+  
+        @include mobile {
+          padding: 10px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+  
+}

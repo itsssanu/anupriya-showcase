@@ -1,0 +1,117 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-title::before {
+  content: "";
+  background-image: url("/public/dots_light.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-title::before {
+    background-image: url("/public/dots-dark.svg");
+  }
+}
+.navbar {
+  height: 100px;
+}
+.navbar .wrapper {
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+@media (max-width: 738px) {
+  .navbar .wrapper {
+    justify-content: flex-end;
+    padding: 20px;
+  }
+}
+.navbar .wrapper span {
+  font-weight: bold;
+}
+@media (max-width: 738px) {
+  .navbar .wrapper span {
+    display: none;
+  }
+}
+.navbar .wrapper .social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 0.2rem solid rebeccapurple;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: rebeccapurple;
+  margin: 3rem 1rem 3rem 0;
+  transition: 0.5s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.navbar .wrapper .social a img {
+  width: 18px;
+  height: 18px;
+}
+.navbar .wrapper a:hover {
+  background: rebeccapurple;
+  color: #20073a;
+  box-shadow: 0 0 1rem rebeccapurple; /* Glowing effect */
+  transform: scale(1.2) rotate(5deg);
+}
+.navbar .wrapper .social a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(154, 103, 228, 0.5);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  z-index: -1; /* Place glow behind the icon */
+}/*# sourceMappingURL=navbar.css.map */
