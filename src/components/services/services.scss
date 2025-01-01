@@ -26,7 +26,7 @@
         font-size: 20px;
         font-weight: 600;
         color: #ffff;
-        padding: 28px;
+        padding: 4px;
       }
     }
 
@@ -220,10 +220,14 @@
 
           .tech {
             margin-top: 12px;
+            gap: 18px;
           }
 
           h2 {
             font-size: 1.4rem;
+          }
+          p {
+            font-size: 1rem;
           }
         }
       }
