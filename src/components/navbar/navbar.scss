@@ -40,9 +40,19 @@
       transition: all 0.3s ease;
       position: relative;
 
+      @include mobile{
+        width: 2.8rem;
+      height: 2.8rem;
+      }
+
       img {
         width: 18px;
         height: 18px;
+
+        @include mobile{
+          width: 14px;
+          height: 14px;
+        }
       }
     }
 
@@ -50,7 +60,7 @@
       background: rebeccapurple;
       color: #20073a;
       box-shadow: 0 0 1rem rebeccapurple; /* Glowing effect */
-  transform: scale(1.2) rotate(5deg);
+      transform: scale(1.2) rotate(5deg);
   }
 
   .social a::before {

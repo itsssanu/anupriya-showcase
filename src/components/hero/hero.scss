@@ -69,8 +69,9 @@
         font-size: 24px;
 
         @include mobile {
-          font-size: 15px;
-          width: 90%;
+          // font-size: 12px;
+          // width: 90%;
+          display: none;
         }
         span{
           color: rebeccapurple;
@@ -88,6 +89,11 @@
           cursor: pointer;
           font-weight: 400;
           font-size: 18px;
+
+          @include mobile {
+            padding: 14px;
+            font-size: 14px;
+          }
         }
       }
 

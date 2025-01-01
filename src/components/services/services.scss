@@ -17,7 +17,7 @@
       align-self: center;
       text-align: center;
       flex-direction: column;
-      padding: 10px;
+      padding: 20px;
     }
     .mbltitle{
       display: none;
@@ -26,7 +26,7 @@
         font-size: 20px;
         font-weight: 600;
         color: #ffff;
-        padding: 4px;
+        padding: 28px;
       }
     }
 
@@ -54,7 +54,7 @@
     align-items: center;
 
     @include mobile {
-      width: 100%;
+      margin-bottom: 18px;
     }
 
     .title {
@@ -66,7 +66,7 @@
         flex-direction: column;
         text-align: center;
         gap: 20px;
-        display: none;
+        // display: none;
       }
 
       h1 {
@@ -112,9 +112,7 @@
     flex-wrap: wrap;
   
     @include mobile {
-      flex-direction: column;
-      width: 90%;
-      gap: 10px;
+      display: none;
     }
   
     .box {
@@ -130,13 +128,6 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: 0.5px solid gray;
   
-      @include mobile {
-        flex: none;
-        width: 100%;
-        padding: 26px;
-        margin-bottom: 12px;
-      }
-  
       h2 {
         font-size: 1.8rem;
         margin-bottom: 10px;
@@ -148,10 +139,6 @@
         text-align: justify;
         line-height: 1.4;
   
-        @include mobile {
-          font-size: 0.9rem;
-          margin: 10px 0;
-        }
       }
       .tech{
         display: flex;
@@ -176,11 +163,10 @@
           background: linear-gradient(135deg, #6c00d8, #ff944d);
           transform: translateY(-3px);
         }
-      
   
         @include mobile {
           padding: 10px;
-          font-size: 0.9rem;
+          font-size: 1rem;
         }
       }
     }
@@ -188,6 +174,64 @@
       &:hover {
         transform: translateY(-10px);
         box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  .listContainer {
+    &.mobile-view {
+      display: none;
+
+      @include mobile {
+        margin-bottom: 18rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .buttons {
+          display: flex;
+          gap: 10px;
+
+          .service-btn {
+            padding: 10px 20px;
+            background: gray;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+
+            &.active {
+              background: linear-gradient(135deg, #ff944d, #6c00d8);
+              font-weight: bold;
+            }
+          }
+        }
+
+        .box {
+          width: 80%;
+          text-align: center;
+          padding: 24px;
+          border: 1px solid gray;
+          border-radius: 15px;
+          background: linear-gradient(145deg, #1e1e30, #141427);
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+          margin-top: 16px;
+
+          .tech {
+            margin-top: 12px;
+          }
+
+          h2 {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    &.desktop-view {
+      @include mobile {
+        display: none;
       }
     }
   }
