@@ -63,10 +63,6 @@ const Contact = () => {
           <span>anuperumal153@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2 className="section-title">Linkedin</h2>
-          <span><a href="https://www.linkedin.com/in/anupriya-p/">https://www.linkedin.com/in/anupriya-p/</a></span>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
           <h2 className="section-title">Phone</h2>
           <span>+91 8870526290</span>
         </motion.div>
